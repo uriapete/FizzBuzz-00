@@ -1,6 +1,8 @@
 #include <string>
 #include <vector>
 
+#pragma once
+
 //class for words to replace words with
 class RepWord
 {
