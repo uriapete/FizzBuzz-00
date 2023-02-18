@@ -28,13 +28,16 @@ std::vector<std::string> RepWord::FizzBuzz(int maxNum){
             RepWord wor = wordList[j];
             if (i % wor.number == 0) {curWord+=wor.word;}
         }
-        if (curWord == "") {curWord = i;}
+        if (curWord == "") {curWord = std::to_string(i);}
         fbLs.push_back(curWord);
         
     }
     return fbLs;
     
 }
+
+RepWord fizz = RepWord("Fizz", 3);
+RepWord buzz = RepWord("Buzz", 5);
 
 void printStrVect(std::vector<std::string> strVect){
     std::cout << "{ ";
@@ -50,5 +53,8 @@ void printStrVect(std::vector<std::string> strVect){
 }
 
 int main() {
-
+    printStrVect(RepWord::FizzBuzz(3));
+    printStrVect(RepWord::FizzBuzz(5));
+    printStrVect(RepWord::FizzBuzz(15));
+    printStrVect(RepWord::FizzBuzz(100));
 }
