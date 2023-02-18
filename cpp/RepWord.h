@@ -1,4 +1,5 @@
 #include <string>
+// #include <variant>
 #include <vector>
 
 #pragma once
@@ -17,7 +18,7 @@ public:
     RepWord(std::string wor, int num);
     ~RepWord();
 
-    std::vector<int> FizzBuzz(int maxNum);
+    static std::vector<std::string> FizzBuzz(int maxNum);
 };
 
 // RepWord::RepWord(/* args */)
